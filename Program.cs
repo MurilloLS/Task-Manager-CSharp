@@ -1,6 +1,6 @@
-﻿using DatThree.TaskContext;
+﻿using DayThree.TaskContext;
 
-namespace DatThree
+namespace DayThree
 {
   static class Program
   {
@@ -16,16 +16,16 @@ namespace DatThree
         Console.WriteLine("3. View Tasks");
         Console.WriteLine("4. Exit");
         Console.Write("Choose an option: ");
-        string? choice = Console.ReadLine();
+        string choice = Console.ReadLine();
 
         switch (choice)
         {
           case "1":
             System.Console.WriteLine();
             Console.Write("Enter task description: ");
-            string? description = Console.ReadLine();
+            string description = Console.ReadLine();
             Console.Write("Is this a high-priority task? (yes/no): ");
-            string? priorityInput = Console.ReadLine();
+            string priorityInput = Console.ReadLine();
             bool isHighPriority = priorityInput?.ToLower() == "yes";
             taskManager.AddTask(description, isHighPriority);
             break;

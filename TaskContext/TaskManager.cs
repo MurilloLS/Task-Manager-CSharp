@@ -1,9 +1,9 @@
-namespace DatThree.TaskContext
+namespace DayThree.TaskContext
 {
   public class TaskManager
   {
-    private Stack<Task> highPriorityTasks = new Stack<Task>();
-    private Queue<Task> normalPriorityTasks = new Queue<Task>();
+    private readonly Stack<Task> highPriorityTasks = new Stack<Task>();
+    private readonly Queue<Task> normalPriorityTasks = new Queue<Task>();
 
     public void AddTask(string description, bool isHighPriority)
     {
